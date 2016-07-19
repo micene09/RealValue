@@ -18,14 +18,14 @@ A [jQuery](https://github.com/jquery/jquery) plugin with the goal to extend the 
 	* [Number](#catnumber)
 	* [Icon](#caticons)
 
-<span id="why"></span>
+<a name="why"></a>
 ## Why
 
 Sometimes...what you get from a field, using [jQuery.val()](http://api.jquery.com/val/) or whatever, need to be different from what user/client see. Just think about a date field, where after getting his value you will need to convert a string like "03/06/1989" to a Date object (or Timestamp).
 
 With RealValue you can add unlimited custom definition to everything, increasing the production speed, getting and setting always with just one method called **rval**, directly on a jQuery selector.
 
-<span id="how"></span>
+<a name="how"></a>
 ## How it works
 
 You have to set your custom fields definitions in a _.js file,_ after* the plugin inclusion.
@@ -65,7 +65,7 @@ $("#myField").rval("the value"); // << this, will set "the value"
 
 The rval method, **can be used with every tag**, even when a primary-key is not defined or the rfield attribute doesn't exist. In this case, rval will get/set using the proper method on the element (jQuery.val, jQuery.prop etc...).
 
-<span id="install"></span>
+<a name="install"></a>
 ## Installation
 
 Include it in the head tag after jQuery:
@@ -83,7 +83,7 @@ require(['realvalue'], function(RealValue) {
 });
 ```
 
-<span id="example"></span>
+<a name="example"></a>
 ## Basic example
 
 In our imaginary scenario, we have just 2 field:
@@ -132,10 +132,10 @@ console.log( $("#a").rval() ); // << this will print: "LOL"
 console.log( $("#b").rval() ); // << this will print: true
 ```
 
-<span id="api"></span>
+<a name="api"></a>
 ## API
 
-<span id="apirealv"></span>
+<a name="apirealv"></a>
 ### RealValue methods
 
 #### field ( selector )
@@ -171,7 +171,7 @@ Will add a new field definition with the given "primaryKey" and "options" as obj
    }
   ```
 
-<span id="apijq"></span>
+<a name="apijq"></a>
 ### jQuery methods
 
 #### rval ()
@@ -214,12 +214,12 @@ other inputs           | val
 select                 | val
 span/div etc...        | text
 
-<span id="catalogue"></span>
+<a name="catalogue"></a>
 ## Definitions Catalogue
 
 The limit is only your imagination...but if you running out of ideas, the following list is for you.
 
-<span id="cattimestamp"></span>
+<a name="cattimestamp"></a>
 ### Timestamp
 
 Set using timestamp (or Date object) and show it using DD/MM/YYYY format. The get call will always return the date as timestamp.
@@ -249,7 +249,7 @@ RealValue.add("timestamp", {
 });
 ```
 
-<span id="catcheckbox"></span>
+<a name="catcheckbox"></a>
 ### Checkbox
 
 Set using any type of value, the checkbox will be checked using the Boolean conversion. The GET call will return the property checked of the element.
@@ -267,7 +267,7 @@ RealValue.add("checkbox", {
 });
 ```
 
-<span id="catperc"></span>
+<a name="catperc"></a>
 ### Percentage
 
 Set using a number and show it using the symbol "%". The GET call will always return a number. Note the _symbol_ property in the field definition object...we can access to it using the function RealValue.field().
@@ -308,7 +308,7 @@ RealValue.add("perc", {
 });
 ```
 
-<span id="catnumber"></span>
+<a name="catnumber"></a>
 ### Number
 
 Set using a number, show it to users with "," as separator for decimals.
@@ -357,7 +357,7 @@ RealValue.add("number", {
 });
 ```
 
-<span id="caticons"></span>
+<a name="caticons"></a>
 ### Icon
 
 Assuming we have to select an icon (image, span or whatever) in a group of icons, in which every icon has a value in an attribute called _icon-value_.
