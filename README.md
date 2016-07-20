@@ -132,6 +132,8 @@ console.log( $("#a").rval() ); // << this will print: "LOL"
 console.log( $("#b").rval() ); // << this will print: true
 ```
 
+<a class="jsbin-embed" href="http://jsbin.com/rehana/1/embed?console,output">Give it a try!</a><script src="http://static.jsbin.com/js/embed.min.js?3.38.1"></script>
+
 <a name="api" id="api"></a>
 ## API
 
