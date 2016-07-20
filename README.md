@@ -18,14 +18,14 @@ A [jQuery](https://github.com/jquery/jquery) plugin with the goal to extend the 
 	* [Number](#catnumber)
 	* [Icon](#caticons)
 
-<a name="why"></a>
+<a name="why" id="why"></a>
 ## Why
 
 Sometimes...what you get from a field, using [jQuery.val()](http://api.jquery.com/val/) or whatever, need to be different from what user/client see. Just think about a date field, where after getting his value you will need to convert a string like "03/06/1989" to a Date object (or Timestamp).
 
 With RealValue you can add unlimited custom definition to everything, increasing the production speed, getting and setting always with just one method called **rval**, directly on a jQuery selector.
 
-<a name="how"></a>
+<a name="how" id="how"></a>
 ## How it works
 
 You have to set your custom fields definitions in a _.js file,_ after* the plugin inclusion.
@@ -57,15 +57,15 @@ Now you can...
 
 ```javascript
 // ...get
-var value = $("#myField").rval(); // << this will set value to "LOL"
+var value = $("#myField").rval(); // << this will return "LOL"
 
 // ...or set
-$("#myField").rval("the value"); // << this, will set "the value"
+$("#myField").rval("the value"); // << this will set "the value"
 ```
 
 The rval method, **can be used with every tag**, even when a primary-key is not defined or the rfield attribute doesn't exist. In this case, rval will get/set using the proper method on the element (jQuery.val, jQuery.prop etc...).
 
-<a name="install"></a>
+<a name="install" id="install"></a>
 ## Installation
 
 Include it in the head tag after jQuery:
@@ -83,14 +83,14 @@ require(['realvalue'], function(RealValue) {
 });
 ```
 
-<a name="example"></a>
+<a name="example" id="example"></a>
 ## Basic example
 
 In our imaginary scenario, we have just 2 field:
 
 ```html
 <input type="text" id="a" value="LOL" />
-<input type="checked" id="b" checked />
+<input type="checkbox" id="b" checked />
 ```
 
 In this case, we should use two different functions to get the values, in order:
@@ -119,7 +119,7 @@ Convert the HTML tag of that checkbox as the following:
 
 ```html
 <input type="text" id="a" value="LOL" />
-<input rfield="checkbox" type="checked" id="b" checked />
+<input rfield="checkbox" type="checkbox" id="b" checked />
 ```
 
 Now just write some code:
@@ -132,10 +132,10 @@ console.log( $("#a").rval() ); // << this will print: "LOL"
 console.log( $("#b").rval() ); // << this will print: true
 ```
 
-<a name="api"></a>
+<a name="api" id="api"></a>
 ## API
 
-<a name="apirealv"></a>
+<a name="apirealv" id="apirealv"></a>
 ### RealValue methods
 
 #### field ( selector )
@@ -171,7 +171,7 @@ Will add a new field definition with the given "primaryKey" and "options" as obj
    }
   ```
 
-<a name="apijq"></a>
+<a name="apijq" id="apijq"></a>
 ### jQuery methods
 
 #### rval ()
@@ -196,12 +196,10 @@ If you need to GET or SET in multiple elements, just use the **name attribute**:
    }
   ```
 
-- SET Use rval() passing just one argument:
+- SET Use rval() passing just one argument, this one can be:
+	* A string, number or whatever, to set every field with the same value.
+	* An object, to set every field using the object pairs (key = rfield attribute).
 
-  ```
-   1\. A value, to set every field with the same value.
-   2\. An object, to set every field using the object pairs (key = rfield attribute).
-  ```
 
 #### autoVal ()
 
@@ -214,12 +212,12 @@ other inputs           | val
 select                 | val
 span/div etc...        | text
 
-<a name="catalogue"></a>
+<a name="catalogue" id="catalogue"></a>
 ## Definitions Catalogue
 
 The limit is only your imagination...but if you running out of ideas, the following list is for you.
 
-<a name="cattimestamp"></a>
+<a name="cattimestamp" id="cattimestamp"></a>
 ### Timestamp
 
 Set using timestamp (or Date object) and show it using DD/MM/YYYY format. The get call will always return the date as timestamp.
@@ -249,7 +247,7 @@ RealValue.add("timestamp", {
 });
 ```
 
-<a name="catcheckbox"></a>
+<a name="catcheckbox" id="catcheckbox"></a>
 ### Checkbox
 
 Set using any type of value, the checkbox will be checked using the Boolean conversion. The GET call will return the property checked of the element.
@@ -267,7 +265,7 @@ RealValue.add("checkbox", {
 });
 ```
 
-<a name="catperc"></a>
+<a name="catperc" id="catperc"></a>
 ### Percentage
 
 Set using a number and show it using the symbol "%". The GET call will always return a number. Note the _symbol_ property in the field definition object...we can access to it using the function RealValue.field().
@@ -308,7 +306,7 @@ RealValue.add("perc", {
 });
 ```
 
-<a name="catnumber"></a>
+<a name="catnumber" id="catnumber"></a>
 ### Number
 
 Set using a number, show it to users with "," as separator for decimals.
@@ -357,7 +355,7 @@ RealValue.add("number", {
 });
 ```
 
-<a name="caticons"></a>
+<a name="caticons" id="caticons"></a>
 ### Icon
 
 Assuming we have to select an icon (image, span or whatever) in a group of icons, in which every icon has a value in an attribute called _icon-value_.
