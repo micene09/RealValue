@@ -132,6 +132,10 @@ console.log( $("#a").rval() ); // << this will print: "LOL"
 console.log( $("#b").rval() ); // << this will print: true
 ```
 
+Give it a try:
+
+<iframe frameBorder="0" src="http://jsbin.com/rehana/embed?console,output" width="100%" height="350px"></iframe>
+
 <a name="api" id="api"></a>
 ## API
 
