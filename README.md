@@ -241,13 +241,15 @@ RealValue.add("timestamp", {
 		if (!isNaN(value)) value = new Date(value);
 
 		// will return DD/MM/YYYY
-		var newval = [value.getDate(), value.getMonth(), value.getFullYear()].join("/");
+		var newval = [value.getDate(), value.getMonth() + 1, value.getFullYear()].join("/");
 
 		// Print result
 		this.autoVal(newval);
 	}
 });
 ```
+
+<a class="jsbin-embed" href="http://jsbin.com/zexuji/embed?console,output">Try this example on JS Bin</a><script src="http://static.jsbin.com/js/embed.min.js?3.38.1"></script>
 
 <a name="catcheckbox" id="catcheckbox"></a>
 ### Checkbox
@@ -266,6 +268,8 @@ RealValue.add("checkbox", {
 	}
 });
 ```
+
+<a class="jsbin-embed" href="http://jsbin.com/maqara/embed?console,output">Try this example on JS Bin</a><script src="http://static.jsbin.com/js/embed.min.js?3.38.1"></script>
 
 <a name="catperc" id="catperc"></a>
 ### Percentage
