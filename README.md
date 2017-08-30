@@ -132,7 +132,7 @@ console.log( $("#a").rval() ); // << this will print: "LOL"
 console.log( $("#b").rval() ); // << this will print: true
 ```
 
-<a class="jsbin-embed" href="http://jsbin.com/rehana/1/embed?console,output">Try this example on JSBin</a><script src="http://static.jsbin.com/js/embed.min.js?3.38.1"></script>
+<a class="jsbin-embed" href="http://jsbin.com/rehana/1/embed?console,output">Try this example on JSBin</a>
 
 <a name="api" id="api"></a>
 ## API
@@ -249,7 +249,7 @@ RealValue.add("timestamp", {
 });
 ```
 
-<a class="jsbin-embed" href="http://jsbin.com/zexuji/embed?console,output">Try this example on JS Bin</a><script src="http://static.jsbin.com/js/embed.min.js?3.38.1"></script>
+<a class="jsbin-embed" href="http://jsbin.com/zexuji/embed?console,output">Try this example on JS Bin</a>
 
 <a name="catcheckbox" id="catcheckbox"></a>
 ### Checkbox
@@ -269,7 +269,7 @@ RealValue.add("checkbox", {
 });
 ```
 
-<a class="jsbin-embed" href="http://jsbin.com/maqara/embed?console,output">Try this example on JS Bin</a><script src="http://static.jsbin.com/js/embed.min.js?3.38.1"></script>
+<a class="jsbin-embed" href="http://jsbin.com/maqara/embed?console,output">Try this example on JS Bin</a>
 
 <a name="catperc" id="catperc"></a>
 ### Percentage
